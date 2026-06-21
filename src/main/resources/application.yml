@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: smart-settlement-demo
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/smart_settlement}
+    username: ${SPRING_DATASOURCE_USERNAME:smart_settlement}
+    password: ${SPRING_DATASOURCE_PASSWORD:smart_settlement}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+server:
+  port: 8080
