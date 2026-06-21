@@ -4,6 +4,7 @@ target/
 .DS_Store
 .env
 *.log
+HELP.md
 
 # Maven
 .mvn/wrapper/maven-wrapper.jar
